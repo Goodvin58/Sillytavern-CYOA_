@@ -193,7 +193,7 @@ async function handleCYOABtn(event) {
     let impersonatePrompt = extension_settings.cyoa_responses?.llm_prompt_impersonate || '';
     impersonatePrompt = substituteParamsExtended(String(extension_settings.cyoa_responses?.llm_prompt_impersonate), { suggestionText: text });
 
-    const quiet_prompt = `/impersonate await=true ${impersonatePrompt}`;
+    const quiet_prompt = `${impersonatePrompt}`;
     inputTextarea.value = quiet_prompt;
 
     if ($button.hasClass('custom-edit-suggestion')) {
